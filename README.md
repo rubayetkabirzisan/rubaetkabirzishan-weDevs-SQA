@@ -1,14 +1,11 @@
-# YourName-weDevs-SQA
-
-Playwright end-to-end tests for the **FlyCommerce** staging platform — weDevs SQA Assessment.  
-Written in **JavaScript** using the Page Object Model (POM).
+# rubaetkabirzishan-weDevs-SQA
 
 ---
 
 ## Project Structure
 
 ```
-YourName-weDevs-SQA/
+rubaetkabirzishan-weDevs-SQA/
 ├── pages/
 │   ├── RegisterPage.js       ← Task 1 — Registration POM
 │   ├── LoginPage.js          ← Task 2 — Login POM
@@ -37,8 +34,8 @@ YourName-weDevs-SQA/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/YourName-weDevs-SQA.git
-cd YourName-weDevs-SQA
+git clone https://github.com/<your-username>/rubaetkabirzishan-weDevs-SQA.git
+cd rubaetkabirzishan-weDevs-SQA
 ```
 
 ### 2. Install dependencies
@@ -108,4 +105,6 @@ npm run test:report
 
 - **Tests fail on first run?** The staging server can be slow — increase `actionTimeout` / `navigationTimeout` in `playwright.config.js`.
 - **Registration fails?** The email `mailinator.com` domain must be accepted by the site. If not, swap the domain in `utils/testData.js`.
-- **Address state field not found?** The state field renders differently depending on selected country — the POM handles both `<select>` and `<input>` variants automatically.
+- **Address form fields not found?** The address field uses a Google Maps-style autocomplete.
+  The POM clicks **"Edit Address Manually"** after entering the address to reveal the
+  structured fields (Division, City, Postal Code) before filling them.
