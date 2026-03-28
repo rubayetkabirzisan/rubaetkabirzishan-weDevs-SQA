@@ -63,13 +63,13 @@ npx playwright test
 ### Run all tests (headed — watch the browser)
 
 ```bash
-npm run test:headed
+npx playwright test --headed
 ```
 
 ### View the HTML report after a run
 
 ```bash
-npm run test:report
+npx playwright show-report
 ```
 
 ---
